@@ -36,6 +36,9 @@
                         <textarea class="form-control" name="description" placeholder="Leave a comment here" id="floatingTextarea2"
                             style="height: 100px">{{ old('description', $course->description) }}</textarea>
                         <label for="floatingTextarea2">Description</label>
+                        @error('description')
+                            <p class="text-danger">{{ $message }}</p>
+                        @enderror
                     </div>
                     <div class="col-12 mt-4">
                         <div class="form-group">
